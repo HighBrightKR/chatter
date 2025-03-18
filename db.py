@@ -98,8 +98,9 @@ class DataBase:
         user_ref = self.db.collection('user').document(user_id)
         return user_ref.get().get('username')
 
-    def get_icon_by_id(self, user_id):
-        user_ref = self.db.collection('user').document()
+    def get_icon_by_id(self, user_id): # 파이어베이스 정책 변경으로 인해 미사용
+        user_ref = self.db.collection('user').document(user_id)
+        return user_ref.get().get('icon_path')
 
     def get_pw_by_id(self, user_id):
         user_ref = self.db.collection('user').document(user_id)
