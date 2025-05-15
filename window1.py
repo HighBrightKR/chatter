@@ -1323,10 +1323,10 @@ class Ui_MainWindow(object):
         self.msg_scroll_bg = QWidget()
         self.msg_scroll_bg.setObjectName(u"msg_scroll_bg")
         self.msg_scroll_bg.setGeometry(QRect(0, 0, 739, 469))
-        self.verticalLayoutWidget_2 = QWidget(self.msg_scroll_bg)
-        self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
-        self.verticalLayoutWidget_2.setGeometry(QRect(10, 10, 721, 451))
-        self.chat_layout = QVBoxLayout(self.verticalLayoutWidget_2)
+        #self.verticalLayoutWidget_2 = QWidget(self.msg_scroll_bg) # 채팅 겹침 문제 해결
+        #self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
+        #self.verticalLayoutWidget_2.setGeometry(QRect(10, 10, 721, 451))
+        self.chat_layout = QVBoxLayout(self.msg_scroll_bg) #verticalLayoutWidget_2-> msg_scroll_bg
         self.chat_layout.setObjectName(u"chat_layout")
         self.chat_layout.setContentsMargins(0, 0, 0, 0)
         self.msg_scroll.setWidget(self.msg_scroll_bg)
